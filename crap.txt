@@ -1,0 +1,130 @@
+# Nmap 6.40 scan initiated Tue Dec 29 19:07:43 2015 as: nmap -oG crap.txt 192.168.0.0/24
+Host: 192.168.0.6 (desktop6.example.com)	Status: Up
+Host: 192.168.0.6 (desktop6.example.com)	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 3260/open/tcp//iscsi///	Ignored State: closed (996)
+Host: 192.168.0.7 (desktop7.example.com)	Status: Up
+Host: 192.168.0.7 (desktop7.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.8 (desktop8.example.com)	Status: Up
+Host: 192.168.0.8 (desktop8.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.9 (desktop9.example.com)	Status: Up
+Host: 192.168.0.9 (desktop9.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.10 (desktop10.example.com)	Status: Up
+Host: 192.168.0.10 (desktop10.example.com)	Status: Up
+Host: 192.168.0.11 (desktop11.example.com)	Status: Up
+Host: 192.168.0.11 (desktop11.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 1111/open/tcp//lmsocialserver///	Ignored State: closed (997)
+Host: 192.168.0.15 (desktop15.example.com)	Status: Up
+Host: 192.168.0.15 (desktop15.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 2049/open/tcp//nfs///	Ignored State: closed (997)
+Host: 192.168.0.16 (desktop16.example.com)	Status: Up
+Host: 192.168.0.16 (desktop16.example.com)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 443/open/tcp//https///, 5432/open/tcp//postgresql///, 6100/open/tcp//synchronet-db///	Ignored State: closed (994)
+Host: 192.168.0.21 (desktop21.example.com)	Status: Up
+Host: 192.168.0.21 (desktop21.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.23 (desktop23.example.com)	Status: Up
+Host: 192.168.0.23 (desktop23.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.24 (desktop24.example.com)	Status: Up
+Host: 192.168.0.24 (desktop24.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.28 (desktop28.example.com)	Status: Up
+Host: 192.168.0.28 (desktop28.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.31 (desktop31.example.com)	Status: Up
+Host: 192.168.0.31 (desktop31.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.38 (desktop38.example.com)	Status: Up
+Host: 192.168.0.38 (desktop38.example.com)	Ports: 22/open/tcp//ssh///	Ignored State: filtered (999)
+Host: 192.168.0.39 (desktop39.example.com)	Status: Up
+Host: 192.168.0.39 (desktop39.example.com)	Ports: 22/open/tcp//ssh///	Ignored State: filtered (999)
+Host: 192.168.0.41 (desktop41.example.com)	Status: Up
+Host: 192.168.0.41 (desktop41.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.43 (desktop43.example.com)	Status: Up
+Host: 192.168.0.43 (desktop43.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.47 (desktop47.example.com)	Status: Up
+Host: 192.168.0.47 (desktop47.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 2049/open/tcp//nfs///, 5666/open/tcp//nrpe///, 49154/open/tcp//unknown///, 49155/open/tcp//unknown///	Ignored State: closed (992)
+Host: 192.168.0.48 (desktop48.example.com)	Status: Up
+Host: 192.168.0.48 (desktop48.example.com)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 139/open/tcp//netbios-ssn///, 443/open/tcp//https///, 445/open/tcp//microsoft-ds///	Ignored State: closed (994)
+Host: 192.168.0.50 (desktop50.example.com)	Status: Up
+Host: 192.168.0.50 (desktop50.example.com)	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 80/open/tcp//http///, 111/open/tcp//rpcbind///	Ignored State: closed (996)
+Host: 192.168.0.54 (desktop54.example.com)	Status: Up
+Host: 192.168.0.54 (desktop54.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.57 (desktop57.example.com)	Status: Up
+Host: 192.168.0.57 (desktop57.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 5903/open/tcp//vnc-3///	Ignored State: closed (997)
+Host: 192.168.0.61 (desktop61.example.com)	Status: Up
+Host: 192.168.0.61 (desktop61.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 5900/open/tcp//vnc///
+Host: 192.168.0.65 (desktop65.example.com)	Status: Up
+Host: 192.168.0.65 (desktop65.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.68 (desktop68.example.com)	Status: Up
+Host: 192.168.0.68 (desktop68.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.70 (desktop70.example.com)	Status: Up
+Host: 192.168.0.70 (desktop70.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 1002/open/tcp//windows-icfw///, 2049/open/tcp//nfs///, 5666/open/tcp//nrpe///, 49152/open/tcp//unknown///	Ignored State: closed (994)
+Host: 192.168.0.72 (desktop72.example.com)	Status: Up
+Host: 192.168.0.72 (desktop72.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.75 (desktop75.example.com)	Status: Up
+Host: 192.168.0.75 (desktop75.example.com)	Status: Up
+Host: 192.168.0.76 (desktop76.example.com)	Status: Up
+Host: 192.168.0.76 (desktop76.example.com)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 139/open/tcp//netbios-ssn///, 443/open/tcp//https///, 445/open/tcp//microsoft-ds///, 3260/open/tcp//iscsi///	Ignored State: closed (993)
+Host: 192.168.0.78 (desktop78.example.com)	Status: Up
+Host: 192.168.0.78 (desktop78.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.80 (desktop80.example.com)	Status: Up
+Host: 192.168.0.80 (desktop80.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.83 (desktop83.example.com)	Status: Up
+Host: 192.168.0.83 (desktop83.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.93 (desktop93.example.com)	Status: Up
+Host: 192.168.0.93 (desktop93.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.99 (desktop99.example.com)	Status: Up
+Host: 192.168.0.99 (desktop99.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.104 (server4.example.com)	Status: Up
+Host: 192.168.0.104 (server4.example.com)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 64623/filtered/tcp//unknown///, 64680/filtered/tcp//unknown///, 65000/filtered/tcp//unknown///, 65129/filtered/tcp//unknown///, 65389/filtered/tcp//unknown///	Ignored State: closed (992)
+Host: 192.168.0.105 (server5.example.com)	Status: Up
+Host: 192.168.0.105 (server5.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///	Ignored State: closed (996)
+Host: 192.168.0.108 (server8.example.com)	Status: Up
+Host: 192.168.0.108 (server8.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.109 (server9.example.com)	Status: Up
+Host: 192.168.0.109 (server9.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.111 (server11.example.com)	Status: Up
+Host: 192.168.0.111 (server11.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.114 (server14.example.com)	Status: Up
+Host: 192.168.0.114 (server14.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 2049/open/tcp//nfs///, 5666/open/tcp//nrpe///, 49154/open/tcp//unknown///, 49155/open/tcp//unknown///, 49156/open/tcp//unknown///	Ignored State: closed (993)
+Host: 192.168.0.115 (server15.example.com)	Status: Up
+Host: 192.168.0.115 (server15.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 3260/open/tcp//iscsi///	Ignored State: closed (997)
+Host: 192.168.0.118 (server18.example.com)	Status: Up
+Host: 192.168.0.118 (server18.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.119 (server19.example.com)	Status: Up
+Host: 192.168.0.119 (server19.example.com)	Ports: 22/open/tcp//ssh///	Ignored State: filtered (999)
+Host: 192.168.0.123 (server23.example.com)	Status: Up
+Host: 192.168.0.123 (server23.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.124 (server24.example.com)	Status: Up
+Host: 192.168.0.124 (server24.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 2049/open/tcp//nfs///, 5666/open/tcp//nrpe///, 49154/open/tcp//unknown///, 49155/open/tcp//unknown///, 49156/open/tcp//unknown///	Ignored State: closed (993)
+Host: 192.168.0.127 (server27.example.com)	Status: Up
+Host: 192.168.0.127 (server27.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.128 (server28.example.com)	Status: Up
+Host: 192.168.0.128 (server28.example.com)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 3260/open/tcp//iscsi///	Ignored State: closed (995)
+Host: 192.168.0.132 (server32.example.com)	Status: Up
+Host: 192.168.0.132 (server32.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 3260/open/tcp//iscsi///	Ignored State: closed (997)
+Host: 192.168.0.134 (server34.example.com)	Status: Up
+Host: 192.168.0.134 (server34.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 64623/filtered/tcp//unknown///, 64680/filtered/tcp//unknown///, 65000/filtered/tcp//unknown///, 65129/filtered/tcp//unknown///, 65389/filtered/tcp//unknown///	Ignored State: closed (993)
+Host: 192.168.0.142 (server42.example.com)	Status: Up
+Host: 192.168.0.142 (server42.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 3260/open/tcp//iscsi///	Ignored State: closed (997)
+Host: 192.168.0.143 (server43.example.com)	Status: Up
+Host: 192.168.0.143 (server43.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///, 2049/open/tcp//nfs///, 5666/open/tcp//nrpe///, 49154/open/tcp//unknown///, 49155/open/tcp//unknown///	Ignored State: closed (994)
+Host: 192.168.0.149 (server49.example.com)	Status: Up
+Host: 192.168.0.149 (server49.example.com)	Ports: 22/open/tcp//ssh///	Ignored State: filtered (999)
+Host: 192.168.0.152 (server52.example.com)	Status: Up
+Host: 192.168.0.152 (server52.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.153 (server53.example.com)	Status: Up
+Host: 192.168.0.153 (server53.example.com)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 139/open/tcp//netbios-ssn///, 443/open/tcp//https///, 445/open/tcp//microsoft-ds///, 3260/open/tcp//iscsi///	Ignored State: closed (993)
+Host: 192.168.0.159 (server59.example.com)	Status: Up
+Host: 192.168.0.159 (server59.example.com)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 88/open/tcp//kerberos-sec///, 111/open/tcp//rpcbind///, 389/open/tcp//ldap///, 443/open/tcp//https///, 464/open/tcp//kpasswd5///, 636/open/tcp//ldapssl///, 749/open/tcp//kerberos-adm///, 2049/open/tcp//nfs///, 3260/open/tcp//iscsi///	Ignored State: closed (989)
+Host: 192.168.0.162 (server62.example.com)	Status: Up
+Host: 192.168.0.162 (server62.example.com)	Ports: 22/open/tcp//ssh///	Ignored State: filtered (999)
+Host: 192.168.0.166 (server66.example.com)	Status: Up
+Host: 192.168.0.166 (server66.example.com)	Status: Up
+Host: 192.168.0.168 (server68.example.com)	Status: Up
+Host: 192.168.0.168 (server68.example.com)	Status: Up
+Host: 192.168.0.191 (server91.example.com)	Status: Up
+Host: 192.168.0.191 (server91.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.193 (server93.example.com)	Status: Up
+Host: 192.168.0.193 (server93.example.com)	Ports: 22/open/tcp//ssh///, 111/open/tcp//rpcbind///	Ignored State: closed (998)
+Host: 192.168.0.198 (server98.example.com)	Status: Up
+Host: 192.168.0.198 (server98.example.com)	Ports: 5357/open/tcp//wsdapi///	Ignored State: filtered (999)
+Host: 192.168.0.199 (server99.example.com)	Status: Up
+Host: 192.168.0.199 (server99.example.com)	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 111/open/tcp//rpcbind///, 139/open/tcp//netbios-ssn///, 443/open/tcp//https///, 445/open/tcp//microsoft-ds///	Ignored State: closed (994)
+Host: 192.168.0.254 (instructor.example.com)	Status: Up
+Host: 192.168.0.254 (instructor.example.com)	Ports: 21/open/tcp//ftp///, 22/open/tcp//ssh///, 25/open/tcp//smtp///, 53/open/tcp//domain///, 80/open/tcp//http///, 88/open/tcp//kerberos-sec///, 111/open/tcp//rpcbind///, 139/open/tcp//netbios-ssn///, 389/open/tcp//ldap///, 443/open/tcp//https///, 445/open/tcp//microsoft-ds///, 464/open/tcp//kpasswd5///, 631/open/tcp//ipp///, 749/open/tcp//kerberos-adm///, 2049/open/tcp//nfs///, 3260/open/tcp//iscsi///, 3306/open/tcp//mysql///, 5432/open/tcp//postgresql///, 8888/open/tcp//sun-answerbook///	Ignored State: closed (981)
+Host: 192.168.0.121 (server21.example.com)	Status: Up
+Host: 192.168.0.121 (server21.example.com)	Ports: 22/open/tcp//ssh///	Ignored State: closed (999)
+# Nmap done at Tue Dec 29 19:07:53 2015 -- 256 IP addresses (64 hosts up) scanned in 10.24 seconds
