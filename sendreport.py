@@ -12,8 +12,10 @@ fname = ip
 
 f=open(fname,"w+") 
 f.close()
-os.system('lscpu | grep "CPU(s):" | head -n 1 > ' + fname )
-os.system('df -Th | grep " /" | head -n 1 >> ' + fname ) 
-os.system("free -m | grep Mem >> " + fname )  
+os.system("free -m | grep Mem > " + fname )  
+os.system('df -Th | grep " /" | head -n 1 >>' + fname ) 
+os.system('lscpu | grep "CPU(s):" | head -n 1 >> ' + fname )
+os.system('lscpu | grep "CPU MHz" >> '+ fname )
 exit() 
+
 

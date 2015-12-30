@@ -9,8 +9,11 @@ import commands
 myip  = sys.argv[1]
 
 
-def scan_now(): 
-	os.system("nmap 192.168.0.0/24 -oG crap.txt")
+def scan_now():
+	rng = raw_input ("\t Enter the range of IPs you want to scan in the format of IP/NETMASK (default = 192.168.0.0/24 )")
+	if rng is "" :
+		rng = "192.168.0.0/24"  
+	os.system("nmap " + rng  + " -oG crap.txt")
 	os.system('cat crap.txt | grep ssh | cut -f2 -d" " > iplist.txt')
  	fobj = open("iplist.txt","rw+")
 	os.system("mkdir reports")
