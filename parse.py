@@ -57,37 +57,43 @@ print cpu_core
 print cpu_mhz
 
 raw_input("\nPress any key to continue ...\n")	
+mean_ram = mean_hdd = mean_core = mean_mhz = 0
 
 def mean_values():
 	c=r=0
 	for x in free_ram.values():
 		r+=x
 		c+=1
+	global mean_ram 
 	mean_ram = (1.0*r)/c
 	c=r=0
 	for x in free_hdd.values():
 		r+=x
 		c+=1
+	global mean_hdd 
 	mean_hdd = (1.0*r)/c
 	c=r=0
 	for x in cpu_core.values():
 		r+=x
 		c+=1
+	global mean_core 
 	mean_core = math.ceil((1.0*r)/c)
 	c=r=0
 	for x in cpu_mhz.values():
 		r+=x
 		c+=1
+	global mean_mhz 
 	mean_mhz = math.ceil((1.0*r)/c)
+	print "mean values calculated" 
 
-	print " mean ram : ",mean_ram
-	print " mean hdd : ", mean_hdd
-	print " mean cores : " ,mean_core
-	print " mean mean MHz : ", mean_mhz
 
 mean_values()
 raw_input("\nPress any key to continue ...\n")	
 
+print " mean ram : ",mean_ram
+print " mean hdd : ", mean_hdd
+print " mean cores : " ,mean_core
+print " mean mean MHz : ", mean_mhz
 
-
+#if __name__ == "__main__" : main() 
 
