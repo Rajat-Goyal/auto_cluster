@@ -1,4 +1,4 @@
-#!#!/usr/bin/python2
+#!/usr/bin/python2
 
 import os
 import sys
@@ -28,3 +28,7 @@ def hdfs_menu():
         elif int(ch) == 2:
             nn_create.nn_menu()
             dn_create.dn_menu()
+
+
+def main ():
+	hdfs_menu()	

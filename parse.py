@@ -30,8 +30,8 @@ for ip in li :
                 x=l.split()
 		x=x[3]
 		x = x[0:-1]
-		print int(x)
-                free_hdd[ip]=int(x)
+		print float(x)
+                free_hdd[ip]=float(x)
 
                 l=ff.readline()
                 l=l.strip()
