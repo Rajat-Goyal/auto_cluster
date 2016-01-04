@@ -8,13 +8,19 @@ import sys
 tmp = open("jt", "r")
 jtip = tmp.readline()
 jtip = jtip.strip()
-jtport = 9002
+jtport = "9002"
 tmp.close()
 
 
 def auto_mr():
     global jtip
     global jtport
+
+    tmp = open("jt", "r")
+    jtip = tmp.readline()
+    jtip = jtip.strip()
+    tmp.close()
+
     print " The ip of jobtacker is  :  " + jtip
     print " the port for the jobtracker is  : " + jtport
     st1 = make_mapred(jtip, jtport)
@@ -25,6 +31,7 @@ def auto_mr():
     copy_into_jt(jtip)
     copy_into_tt()
     print "automatically configured jt and tt "
+    ddd = raw_input ("Enter any key  ")
 
 
 def mr_menu():
@@ -44,10 +51,14 @@ def mr_menu():
         ch = raw_input("\t Enter Your Choice : ")
 
         if int(ch) == 1:
-            jtport = raw_input("Enter the port number for the job Tracker (default=9002")
+            jtport = raw_input("Enter the port number for the job Tracker (default=9002)")
             if jtport is "":
                 jtport = "9002"
                 print "user did not specify any port . Using defautl port : " + jtport
+            tmp = open("jt", "r")
+            jtip = tmp.readline()
+            jtip = jtip.strip()
+            tmp.close()
             st1 = make_mapred(jtip, jtport)
             f1 = open("mapred-site.xml", "w+")
             f1.write(st1)
@@ -59,10 +70,11 @@ def mr_menu():
             print "copying into tt"
             copy_into_tt()
             print "configured tasktrackers and jobtrackers"
-
+            ddd = raw_input ("Enter any key  ")
             break
         elif int(ch) == 2:
             auto_mr()
+            ddd = raw_input ("Enter any key  ")
             break
 
 
@@ -101,6 +113,7 @@ def copy_into_jt(jtip):
     print "copying core-site.xml into jobtracker ##comment this later ##"
     print "sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + jtip + ":/etc/hadoop/ "
     os.system("sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + jtip + ":/etc/hadoop/ ")
+    ddd = raw_input ("Enter any key  ")
 
 
 def copy_into_tt():
@@ -113,6 +126,7 @@ def copy_into_tt():
         os.system("sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" mapred-site.xml root@" + ttip + ":/etc/hadoop/ ")
         print "tasktracker ready at :  " + ttip
     tmp.close()
+    ddd = raw_input ("Enter any key  ")
 
 
 

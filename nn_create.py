@@ -10,12 +10,17 @@ nndir = "/name"
 tmp = open("nn", "r")
 nnip = tmp.readline()
 nnip = nnip.strip()
+tmp.close()
 
 
 def auto_nn():
     global nndir
     global nnport
     global nnip
+    tmp = open("nn", "r")
+    nnip = tmp.readline()
+    nnip = nnip.strip()
+    tmp.close()
     st1 = make_core(nnip, nnport)
     st2 = make_hdfs(nndir)
     f1 = open("hdfs-site.xml", "w")
@@ -35,6 +40,7 @@ def auto_nn():
     print "sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + nnip + ":/etc/hadoop/ "
     os.system("sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + nnip + ":/etc/hadoop/ ")
     print "Files successfully copied into target system. NameNode configured at " + nnip
+    ddd = raw_input ("Enter any key  ")
 
 
 def nn_menu():
@@ -72,15 +78,18 @@ def nn_menu():
             f2.close()
             print "sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" hdfs-site.xml root@" + nnip + ":/etc/hadoop/ "
             os.system("sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" hdfs-site.xml root@" + nnip + ":/etc/hadoop/ ")
-            l = raw_input()
+            #l = raw_input()
             print "sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + nnip + ":/etc/hadoop/ "
             os.system("sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + nnip + ":/etc/hadoop/ ")
+            ddd = raw_input ("Enter any key  ")
             break
         elif int(ch) == 2:
             auto_nn()
+            ddd = raw_input ("Enter any key  ")
             break
         elif int(ch) == 3:
             print "This feature is still under progress. Please wait for the next update"
+            ddd = raw_input ("Enter any key  ")
             break  # cccccc
         else:
             print "Enter A valid option (1-3) "

@@ -20,8 +20,14 @@ def auto_dn():
     global dndir
     global nnport
     global nnip
-    st1=make_core(nnip, nnport)
-    st2=make_hdfs(dndir)
+    tmp = open("nn", "r")
+    nnip = tmp.readline()
+    nnip = nnip.strip()
+    nnport = tmp.readline()
+    nnport = nnport.strip()
+    tmp.close()
+    st2 = make_core(nnip, nnport)
+    st1 = make_hdfs(dndir)
     f1 = open("hdfs-site.xml", "w")
     f1.write(st1)
     f2 = open("core-site.xml", "w")
@@ -40,11 +46,12 @@ def auto_dn():
         print "copying hdfs-site.xml ##comment this later ##"
         print "sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" hdfs-site.xml root@" + dnip + ":/etc/hadoop/ "
         os.system("sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" hdfs-site.xml root@" + dnip + ":/etc/hadoop/ ")
-        l = raw_input("press any key to copy core file ")
+        #l = raw_input("press any key to copy core file ")
         print "sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + dnip + ":/etc/hadoop/ "
         os.system("sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + dnip + ":/etc/hadoop/ ")
         print "Files successfully copied into target system. DataNode configured at " + dnip
     tmp.close()
+    ddd = raw_input ("Enter any key  ")
 
 
 def dn_menu():
@@ -71,9 +78,9 @@ def dn_menu():
             st2 = make_core(nnip, nnport)
             f1 = open("hdfs-site.xml", "w")
             f1.write(st1)
+            f1.close()
             f2 = open("core-site.xml", "w")
             f2.write(st2)
-            f1.close()
             f2.close()
             print "The config files for data nodes is ready "
             print "DataNode directory " + dndir
@@ -87,16 +94,18 @@ def dn_menu():
                 print "copying hdfs-site.xml ##comment this later ##"
                 print "sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" hdfs-site.xml root@" + dnip + ":/etc/hadoop/ "
                 os.system("sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" hdfs-site.xml root@" + dnip + ":/etc/hadoop/ ")
-                l = raw_input("enter any key to copy core-site ")
+                #l = raw_input("enter any key to copy core-site ")
                 print "sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + dnip + ":/etc/hadoop/ "
                 os.system("sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + dnip + ":/etc/hadoop/ ")
                 print "Datanode ready at :  " + dnip
+                ddd = raw_input ("Enter any key  ")
             break
 
         elif int(ch) == 2:
             print " Automatically configuring the DataNode"
             auto_dn()
             print "configured DNs"
+            ddd = raw_input ("Enter any key  ")
             break  # cccccc
 
         else:
@@ -116,7 +125,7 @@ def make_hdfs(dndir):
 
 <property>
 <name>dfs.data.dir</name>
-<value>/""" + dndir + """</value>
+<value>""" + dndir + """</value>
 </property>
 
 
