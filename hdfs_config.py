@@ -25,10 +25,15 @@ def hdfs_menu():
         if int(ch) == 1:
             nn_create.auto_nn()
             dn_create.auto_dn()
+            break
         elif int(ch) == 2:
             nn_create.nn_menu()
             dn_create.dn_menu()
+            break
 
 
-def main ():
-	hdfs_menu()	
+
+def main():
+    hdfs_menu()
+
+#if __name__ == "__main__" : main()

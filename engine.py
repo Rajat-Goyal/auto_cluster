@@ -5,11 +5,27 @@ import math
 import sys
 import commands
 import re
-from parse import *
 import time
 import commands
+import operator
+
+import scan
+import parse
+import hdfs_config
+import mapred_config
+
 
 pwd = commands.getoutput("echo $PWD")
+
+mean_ram = parse.mean_ram
+mean_hdd = parse.mean_hdd
+mean_core = parse.mean_core
+mean_mhz = parse.mean_mhz
+free_ram = parse.free_ram
+free_hdd = parse.free_hdd
+cpu_core = parse.cpu_core
+cpu_mhz = parse.cpu_mhz
+
 
 
 def print_list():
@@ -117,7 +133,7 @@ def man_config():
     nn_sno = int(for_nn[0])
     nn_ip = iplist[nn_sno]
     print "Name node will be configured on the ip :   " + nn_ip
-    nnf = open(pwd + "/nn", "w+")
+    nnf = open("nn", "w+")
     nnf.write(nn_ip + "\n")
     nnf.close()
 
@@ -126,14 +142,14 @@ def man_config():
     jt_sno = int(for_jt[0])
     jt_ip = iplist[jt_sno]
     print "Job Tracker will be configured on the ip :   " + jt_ip
-    jtf = open(pwd + "/jt", "w+")
+    jtf = open("jt", "w+")
     jtf.write(jt_ip + "\n")
     jtf.close()
 
     for_dn = raw_input("Serial numbers of the systems you want to make datanode(space seperated)   :  ")
     dn_list = for_dn.split()
     print "The systems with following ips will be configured as datanode"
-    dnf = open(pwd + "/dn", "w+")
+    dnf = open("dn", "w+")
     for i in range(len(dn_list)):
         tmp = iplist[int(dn_list[i])]
         print "\t" + tmp
@@ -143,7 +159,7 @@ def man_config():
     for_tt = raw_input("Serial numbers of the systems you want to make tasktracker.(space seperated) :  ")
     tt_list = for_tt.split()
     print "TaskTracker will be configured on the following machines "
-    jtf = open(pwd + "/tt", "w+")
+    jtf = open("tt", "w+")
     for i in range(len(tt_list)):
         tmp = iplist[int(tt_list[i])]
         print "\t" + tmp
@@ -152,6 +168,19 @@ def man_config():
 
 
 def main():
+
+    os.system("clear")
+    print "Removing all the previous known hosts "
+    os.system("rm -f /root/.ssh/known_hosts")
+    print " Scanning The Network "
+    #scan.scan_now()
+
+    print " Parsing the Data from the nodes "
+    parse.parser()
+
+
+
+
     # time.sleep(5)
     l = raw_input("enter any key to continue ====> ")
     while True:
@@ -176,7 +205,7 @@ def main():
             xx = raw_input("Enter a Valid Option! Press Any Key To Retry ")
             continue
 
-        hdfs_config()
-        mapreduce_config()
+    hdfs_config.hdfs_menu()
+    mapred_config.mr_menu()
 
-if __name__ == "__main__": main()
+if __name__ == "__main__" : main()

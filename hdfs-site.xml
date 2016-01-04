@@ -6,8 +6,8 @@
 <configuration>
 
 <property>
-<name>dfs.name.dir</name>
-<value>/loop</value>
+<name>fs.default.name</name>
+<value>hdfs://:</value>
 </property>
 
 

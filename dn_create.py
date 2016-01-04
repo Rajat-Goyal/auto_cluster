@@ -91,12 +91,14 @@ def dn_menu():
                 print "sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + dnip + ":/etc/hadoop/ "
                 os.system("sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + dnip + ":/etc/hadoop/ ")
                 print "Datanode ready at :  " + dnip
+            break
 
         elif int(ch) == 2:
             print " Automatically configuring the DataNode"
             auto_dn()
             print "configured DNs"
             break  # cccccc
+
         else:
             print " Enter A valid option (1-2) "
             time.sleep(2)

@@ -4,18 +4,20 @@ import os
 import sys
 import commands
 import time
+
 nnport = "9001"
 nndir = "/name"
 tmp = open("nn", "r")
 nnip = tmp.readline()
 nnip = nnip.strip()
 
+
 def auto_nn():
     global nndir
     global nnport
     global nnip
-    st1=make_core(nnip, nnport)
-    st2=make_hdfs(nndir)
+    st1 = make_core(nnip, nnport)
+    st2 = make_hdfs(nndir)
     f1 = open("hdfs-site.xml", "w")
     f1.write(st1)
     f2 = open("core-site.xml", "w")
@@ -26,10 +28,10 @@ def auto_nn():
     print "datanode dir  : " + nndir
     print "namenode ip   : " + nnip
     print "namenode port : " + nnport
-    print "Press Any key to copy it to the selected datanodes "
+    print "Press Any key to copy it to the selected namenodes "
     print "sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" hdfs-site.xml root@" + nnip + ":/etc/hadoop/ "
     os.system("sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" hdfs-site.xml root@" + nnip + ":/etc/hadoop/ ")
-    l = raw_input()
+    #l = raw_input()
     print "sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + nnip + ":/etc/hadoop/ "
     os.system("sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + nnip + ":/etc/hadoop/ ")
     print "Files successfully copied into target system. NameNode configured at " + nnip
@@ -49,7 +51,7 @@ def nn_menu():
         print """
 \t\t 1. Configure a fresh namenode(Manual)\n
 \t\t 2. Configure a fresh namenode(Automatic)\n
-\t\t 3. Update an existing namenode configuration.\n
+\t\t 3. Update an existing namenode configuration.(under Devolopment)\n
 """
         ch = raw_input("\t Enter Your Choice : ")
 
@@ -73,8 +75,10 @@ def nn_menu():
             l = raw_input()
             print "sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + nnip + ":/etc/hadoop/ "
             os.system("sshpass -p \"redhat\" scp -o \"StrictHostKeyChecking no\" core-site.xml root@" + nnip + ":/etc/hadoop/ ")
+            break
         elif int(ch) == 2:
             auto_nn()
+            break
         elif int(ch) == 3:
             print "This feature is still under progress. Please wait for the next update"
             break  # cccccc
